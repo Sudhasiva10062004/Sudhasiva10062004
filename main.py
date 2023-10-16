@@ -1,12 +1,19 @@
-def linear_search_product(product_list, target_product):
-    indices = []
-    for i, product in enumerate(product_list):
-        if product == target_product:
-            indices.append(i)
-    return indices
+class Player:
+    def play(self):
+        print("The player is playing cricket.")
 
-# Example usage:
-products = ["apple", "banana", "orange", "apple", "grape", "apple"]
-target = "apple"
-result = linear_search_product(products, target)
-print(result)
+class Batsman(Player):
+    def play(self):
+        print("The batsman is batting.")
+
+class Bowler(Player):
+    def play(self):
+        print("The bowler is bowling.")
+
+# Create objects for a Batsman and a Bowler
+batsman1 = Batsman()
+bowler1 = Bowler()
+
+# Call the play() method for each object
+batsman1.play()  # The batsman is batting.
+bowler1.play()   # The bowler is bowling.
